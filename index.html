@@ -23,10 +23,18 @@
             <a href="index.html" class="logo">HUBBET</a>
             <h2 class="title">Crear Nueva Cuenta</h2>
             <form id="formularioRegistro">
-                <input type="text" placeholder="Nombre" class="formField">
-                <input type="text" placeholder="Usuario*" class="formField">
-                <input type="email" placeholder="Email*" class="formField">
-                <input type="password" placeholder="Contraseña*" class="formField">
+                <div class="formField">
+                    <input type="text" placeholder="Nombre">
+                </div>
+                <div class="formField">
+                    <input type="text" placeholder="Usuario*">
+                </div>
+                <div class="formField">
+                    <input type="email" placeholder="Email*">
+                </div>
+                <div class="formField">
+                    <input type="password" placeholder="Contraseña*">
+                </div>
                 <span>* Campos obligatorios</span>
                 <button type="submit" class="formField">Registrar</button>
             </form>
@@ -34,6 +42,11 @@
             <p class="linkLogin">¿Ya tienes cuenta?<a href="#0">Inicia sesión aquí</a></p>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.formField input').forEach((e) => {
+            e.addEventListener('click', () => { e.parentElement.classList.add('focused') })
+        })
+    </script>
 </body>
 
 </html>

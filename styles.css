@@ -70,68 +70,104 @@ body {
 }
 
 #container .right #formularioRegistro .formField {
-  font-family: "Nunito", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   width: 100%;
   border-radius: 2px;
-  border: 1px solid transparent;
   background: #ffffff;
-  font-weight: bold;
-  font-size: 15px;
-  outline: 0;
   margin: 12px 0;
-  color: #272727;
+  border: 1px solid transparent;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   -webkit-appearance: none;
+}
+
+#container .right #formularioRegistro .formField.valid {
+  border: 1px solid #2ecc40;
+}
+
+#container .right #formularioRegistro .formField.valid::after {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #2ecc40;
+}
+
+#container .right #formularioRegistro .formField.invalid {
+  border: 1px solid #ff4136;
+}
+
+#container .right #formularioRegistro .formField.invalid::after {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #ff4136;
+}
+
+#container .right #formularioRegistro .formField.focused {
+  border-color: #0049b7;
+}
+
+#container .right #formularioRegistro .formField input {
+  font-family: "Nunito", sans-serif;
+  background: transparent;
+  border: none;
+  border-radius: 2px;
+  width: 93%;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #272727;
+  outline: 0;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 
-#container .right #formularioRegistro .formField::-webkit-input-placeholder {
+#container .right #formularioRegistro .formField input::-webkit-input-placeholder {
   font-size: 14px;
   color: #272727;
 }
 
-#container .right #formularioRegistro .formField:-ms-input-placeholder {
+#container .right #formularioRegistro .formField input:-ms-input-placeholder {
   font-size: 14px;
   color: #272727;
 }
 
-#container .right #formularioRegistro .formField::-ms-input-placeholder {
+#container .right #formularioRegistro .formField input::-ms-input-placeholder {
   font-size: 14px;
   color: #272727;
 }
 
-#container .right #formularioRegistro .formField::placeholder {
+#container .right #formularioRegistro .formField input::placeholder {
   font-size: 14px;
   color: #272727;
 }
 
 @media (max-width: 576px) {
-  #container .right #formularioRegistro .formField {
+  #container .right #formularioRegistro .formField input {
     padding: 12px;
     font-size: 14px;
   }
 }
 
-#container .right #formularioRegistro .formField:focus {
-  border-color: #0049b7;
-}
-
 #container .right #formularioRegistro button[type="submit"] {
+  font-family: "Nunito", sans-serif;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   background-color: #0049b7;
   color: #ffffff;
+  border: none;
+  padding: 15px;
+  outline: 0;
   border-radius: 3px;
   margin-top: 20px;
 }
