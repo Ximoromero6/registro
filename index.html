@@ -7,42 +7,38 @@
     <script src="https://kit.fontawesome.com/f32dfec8d8.js" crossorigin="anonymous"></script>
     <link rel="icon" href="images/globe.svg">
     <link rel="stylesheet" href="styles.css">
-    <title>Login - Hubbet</title>
+    <title>Registro - Hubbet</title>
 </head>
 
 <body>
     <div id="container">
         <div class="left">
-            <a href="index.html" class="logo">HUBBET</a>
-            <h2 class="title">Bienvenido de nuevo</h2>
-            <button class="googleButton"><img src="images/googleLogo.png" alt="">Iniciar sesión con Google</button>
-            <div class="separator">
-                <hr>
-                <span>O inicia sesión con tu email</span>
-                <hr>
-            </div>
-            <form id="formularioLogin">
-                <input type="email" placeholder="Tu Email" class="formField">
-                <input type="password" placeholder="Tu Contraseña" class="formField">
-                <div class="loginOptions">
-                    <div class="keepSesion">
-                        <input type="checkbox" id="mantenerSesion">
-                        <label for="mantenerSesion">Mantener sesión iniciada</label>
-                    </div>
-                    <a href="#0">¿Contraseña olvidada?</a>
-                </div>
-                <button type="submit" class="formField">Iniciar sesión <i
-                        class="fas fa-long-arrow-alt-right"></i></button>
-            </form>
-            <hr class="separator2">
-            <p class="linkRegistro">¿Todavía no tienes cuenta?<a href="#0">Regístrate aquí</a></p>
-        </div>
-        <div class="right">
             <div class="text">
                 <h3>Nueva actualización disponible</h3>
                 <p>Hemos agregado algunas nuevas características increíbles</p>
                 <button>SABER MÁS</button>
             </div>
+        </div>
+        <div class="right">
+            <a href="index.html" class="logo">HUBBET</a>
+            <h2 class="title">Crear Nueva Cuenta</h2>
+            <form id="formularioRegistro">
+                <input type="text" placeholder="Nombre" class="formField">
+                <input type="text" placeholder="Usuario*" class="formField">
+                <input type="email" placeholder="Email*" class="formField">
+                <input type="password" placeholder="Contraseña*" class="formField">
+                <span>* Campos obligatorios</span>
+                <!--   <div class="loginOptions">
+                    <div class="keepSesion">
+                        <input type="checkbox" id="mantenerSesion">
+                        <label for="mantenerSesion">Mantener sesión iniciada</label>
+                    </div>
+                    <a href="#0">¿Contraseña olvidada?</a>
+                </div> -->
+                <button type="submit" class="formField">Registrar</button>
+            </form>
+            <hr class="separator2">
+            <p class="linkLogin">¿Ya tienes cuenta?<a href="#0">Inicia sesión aquí</a></p>
         </div>
     </div>
 </body>
